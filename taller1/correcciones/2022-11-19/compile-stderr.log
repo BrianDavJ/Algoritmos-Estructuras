@@ -1,0 +1,24 @@
+In file included from ../../../../../taller1/lista_tests.cpp:2:
+./Lista.h: In constructor ‘Lista::Nodo::Nodo(Lista::Nodo*, int, Lista::Nodo*)’:
+./Lista.h:93:19: warning: ‘Lista::Nodo::ant’ will be initialized after [-Wreorder]
+   93 |             Nodo* ant;
+      |                   ^~~
+./Lista.h:92:17: warning:   ‘int Lista::Nodo::valor’ [-Wreorder]
+   92 |             int valor;
+      |                 ^~~~~
+./Lista.h:95:13: warning:   when initialized here [-Wreorder]
+   95 |             Nodo(Nodo* a, int v,Nodo*s): ant(a),valor(v),sig(s){}
+      |             ^~~~
+In file included from ../../../../../taller1/lista_tests.cpp:3:
+./Lista.cpp: In member function ‘void Lista::eliminar(Nat)’:
+./Lista.cpp:80:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘Nat’ {aka ‘long unsigned int’} [-Wsign-compare]
+   80 |     for (int j=0; j<i;j++){
+      |                   ~^~
+./Lista.cpp: In member function ‘const int& Lista::iesimo(Nat) const’:
+./Lista.cpp:116:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘Nat’ {aka ‘long unsigned int’} [-Wsign-compare]
+  116 |     for (int j=0; j<i;j++){
+      |                   ~^~
+./Lista.cpp: In member function ‘int& Lista::iesimo(Nat)’:
+./Lista.cpp:127:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘Nat’ {aka ‘long unsigned int’} [-Wsign-compare]
+  127 |     for (int j=0; j<i;j++){
+      |                   ~^~
