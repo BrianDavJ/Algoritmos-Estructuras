@@ -77,7 +77,7 @@ void Lista::eliminar(Nat i) {
         delete actual;
         return;
     }
-    for (int j=0; j<i;j++){
+    for (Nat j=0; j<i;j++){
         actual=actual->sig;
     }
     Nodo* siguiente=actual->sig;
