@@ -113,7 +113,7 @@ int Lista::longitud() const {
 const int& Lista::iesimo(Nat i) const {
     // Completar
     Nodo* actual=prim;
-    for (int j=0; j<i;j++){
+    for (Nat j=0; j<i;j++){
         actual=actual->sig;
     }
     return actual->valor;
@@ -124,7 +124,7 @@ int& Lista::iesimo(Nat i) {
     // Completar (hint: es igual a la anterior...)
     //assert(false);
     Nodo* actual=prim;
-    for (int j=0; j<i;j++){
+    for (Nat j=0; j<i;j++){
         actual=actual->sig;
     }
     return actual->valor;
