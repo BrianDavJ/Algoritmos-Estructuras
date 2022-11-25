@@ -89,10 +89,10 @@ private:
 
     struct Nodo {
         // Completar
-            int valor;
-            Nodo* ant;
-            Nodo* sig;
-            Nodo(Nodo* a, int v,Nodo*s): ant(a),valor(v),sig(s){}
+        Nodo(Nodo* a, int v,Nodo*s): ant(a),valor(v),sig(s){}
+        int valor;
+        Nodo* ant;
+        Nodo* sig;
     };
     Nodo* prim;
     Nodo* ult;
