@@ -67,17 +67,15 @@ class Conjunto
                     return x;
                 }else if( clave < x->valor) {
                     return buscarNodo(x->izq, clave);
-                }else if(clave>x->valor){
-                    return buscarNodo(x->der,clave);
                 }else{
-
+                    return buscarNodo(x->der,clave);
                 }
             }
             Nodo* buscarRaiz(Nodo* x){
                 if (x == nullptr or x->padre==nullptr ){
                     return x;
                 }else{
-                    buscarRaiz(x->padre);
+                    return buscarRaiz(x->padre);
                 }
             }
         };
