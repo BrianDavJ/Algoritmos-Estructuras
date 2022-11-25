@@ -1,4 +1,4 @@
-# Install script for directory: /home/clinux01/Escritorio/AyED2-Labo05-Listas_enlazadas
+# Install script for directory: /mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/clinux01/Escritorio/AyED2-Labo05-Listas_enlazadas/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
