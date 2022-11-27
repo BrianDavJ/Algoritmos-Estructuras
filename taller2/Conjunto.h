@@ -67,7 +67,7 @@ class Conjunto
                     return x;
                 }else if( clave < x->valor) {
                     return buscarNodo(x->izq, clave);
-                }else{
+                }else {
                     return buscarNodo(x->der,clave);
                 }
             }

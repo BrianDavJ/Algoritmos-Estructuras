@@ -67,10 +67,12 @@ void Conjunto<T>::remover(const T& e) {
            if (actual->izq== nullptr){
                transplant(actual,actual->der);
                _cardinal--;
+               delete actual;
                break;
            } else if (actual->der== nullptr){
                transplant(actual,actual->izq);
                _cardinal--;
+               delete actual;
                break;
            }else{
                 T s=siguiente(actual->valor);
@@ -83,6 +85,7 @@ void Conjunto<T>::remover(const T& e) {
                     reemplazo->der->padre=reemplazo;
                 }
                 transplant(actual,reemplazo);
+                delete actual;
                 reemplazo->izq=i;
                 reemplazo->izq->padre=reemplazo;
                _cardinal--;
@@ -94,19 +97,17 @@ void Conjunto<T>::remover(const T& e) {
              actual=actual->izq;
          }
     }
-
 }
 
 template <class T>
 void Conjunto<T>::transplant(Nodo* elem, Nodo* elem2) {
     if (elem->padre== nullptr){
         _raiz=elem2;
-        delete elem;
+
     }else if (elem==elem->padre->izq){
         elem->padre->izq=elem2;
     }   else{
         elem->padre->der=elem2;
-
     }
     if (elem2!= nullptr){
         elem2->padre=elem->padre;
@@ -166,7 +167,7 @@ void Conjunto<T>::mostrar(std::ostream&) const {
 
 template <class T>
 void Conjunto<T>::destructor() {
-    Nodo *actual = _raiz;
+    Nodo* actual = _raiz;
     Nodo* inicial= _raiz;
     if (actual!= nullptr) {
         T original = actual->valor;
@@ -184,7 +185,7 @@ void Conjunto<T>::destructor() {
             inicial= buscarR();
             actual = sig2;
         }
-        delete actual;
+        remover(actual->valor);
         _raiz= nullptr;
         _cardinal=0;
     }
