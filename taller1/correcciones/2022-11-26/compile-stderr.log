@@ -1,0 +1,11 @@
+In file included from ../../../../../taller1/lista_tests.cpp:2:
+./Lista.h: In constructor ‘Lista::Nodo::Nodo(Lista::Nodo*, int, Lista::Nodo*)’:
+./Lista.h:94:15: warning: ‘Lista::Nodo::ant’ will be initialized after [-Wreorder]
+   94 |         Nodo* ant;
+      |               ^~~
+./Lista.h:93:13: warning:   ‘int Lista::Nodo::valor’ [-Wreorder]
+   93 |         int valor;
+      |             ^~~~~
+./Lista.h:92:9: warning:   when initialized here [-Wreorder]
+   92 |         Nodo(Nodo* a, int v,Nodo*s): ant(a),valor(v),sig(s){}
+      |         ^~~~
