@@ -115,9 +115,8 @@ template <typename T>
 void string_map<T>::erase(const string& clave) {
     // COMPLETAR
     Nodo* actual=raiz;
-    int i=0;
-    int desde;
-    while(i<clave.size()){
+    /*
+     * while(i<clave.size()){
         bool bifurca= false;
         int j=0;
         while(not bifurca and j<actual->siguientes.size()){
@@ -129,13 +128,46 @@ void string_map<T>::erase(const string& clave) {
             }
         }
     }
-    while(actual->definicion!= nullptr){
-        Nodo* prox= actual->siguientes[desde];
-        delete actual;
-        actual=prox;
+     */
+    Nodo* ultimaClave=actual;
+    string pal;
+    for (auto& c : clave){
+        actual=actual->siguientes[c];
+        if (actual->definicion!= nullptr){
+            ultimaClave=actual;
+        }
+
     }
-    delete actual->definicion;
-    delete actual;
+    int j=0;
+    bool sigue= false;
+    if (actual!= nullptr) {
+        for (auto &p: actual->siguientes) {
+            if (p != nullptr) {
+                sigue = true;
+            }
+        }
+    }
+    if (sigue){
+        delete actual->definicion;
+
+    }else{
+        Nodo* desde;
+        if (ultimaClave->definicion==actual->definicion){
+            desde=raiz;
+        } else {
+            desde = ultimaClave;
+        }
+        for (auto& c : clave) {
+                Nodo *prox = desde->siguientes[c];
+                delete desde;
+                desde= prox;
+                if (desde->definicion==actual->definicion){
+                    delete desde->definicion;
+                }
+        }
+
+
+    }
 }
 
 template <typename T>
