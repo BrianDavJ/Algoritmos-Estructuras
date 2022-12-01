@@ -167,9 +167,15 @@ void Conjunto<T>::mostrar(std::ostream&) const {
 
 template <class T>
 void Conjunto<T>::destructor() {
-    Nodo* actual = _raiz;
+
     Nodo* inicial= _raiz;
-    if (actual!= nullptr) {
+    if (_raiz!= nullptr) {
+        while (_cardinal != 0) {
+            Nodo* actual = _raiz;
+            remover(actual->valor);
+        }
+    }
+        /*
         T original = actual->valor;
         if (actual->valor != minimo()) {
             actual = buscar(actual, minimo());
@@ -186,7 +192,8 @@ void Conjunto<T>::destructor() {
             actual = sig2;
         }
         remover(actual->valor);
+        delete actual;
         _raiz= nullptr;
         _cardinal=0;
-    }
+    }*/
 }

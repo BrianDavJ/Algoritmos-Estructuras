@@ -12,19 +12,11 @@ string_map<T>::string_map(const string_map<T>& aCopiar) : string_map() { *this =
 template <typename T>
 string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
     // COMPLETAR
-/*    Nodo* actual=raiz;
-    actual=new Nodo();
-    auto it=d._claves.cbegin();
-    while(it!=d._claves.cend()){
-        int i=0;
-        while(i<it->size()-1) {
-            actual->siguientes[*it[i]]=new Nodo();
-            i++;
-        }
-        actual->siguientes[*it[i]]=new Nodo(d.raiz[*it[i]]);
-        it++;
+    *this->raiz=nullptr;  // Sería mejor usar erase para "vaciar" *this? Estoy usando el operador = de Nodo* acá, no?
+    for (auto  c : d._claves){
+        const pair<string,T> par(c, d.at(c));
+        *this->insert(par);
     }
-*/
     return *this;
 }
 

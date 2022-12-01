@@ -46,7 +46,6 @@ class Conjunto
         void mostrar(std::ostream&) const;
 
     private:
-
         /**
          * Completar con lo que sea necesario...
          **/
@@ -81,10 +80,9 @@ class Conjunto
         };
         // Puntero a la raíz de nuestro árbol.
         Nodo* _raiz;
-
+        unsigned int _cardinal;
         //destructor
         void destructor();
-        unsigned int _cardinal;
         void transplant(Nodo* elem, Nodo* elem2);
         Nodo* buscar(Nodo* x, T clave){
             return x->buscarNodo(x,clave);
@@ -100,9 +98,9 @@ class Conjunto
             }
             return actual->valor;
         };
-    Nodo* buscarR(){
-        return _raiz->buscarRaiz(_raiz);
-    }
+        Nodo* buscarR(){
+            return _raiz->buscarRaiz(_raiz);
+        }
 };
 
 
