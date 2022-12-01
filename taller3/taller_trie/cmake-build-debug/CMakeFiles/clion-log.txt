@@ -1,4 +1,4 @@
-C:\Windows\system32\wsl.exe --distribution Debian --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie -B /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug"
+C:\Windows\system32\wsl.exe --distribution Debian --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd '/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug' && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S '/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie' -B '/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug'"
 -- The C compiler identification is GNU 10.2.1
 -- The CXX compiler identification is GNU 10.2.1
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@ C:\Windows\system32\wsl.exe --distribution Debian --exec /bin/bash -c "export CM
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug
+-- Build files have been written to: /mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug

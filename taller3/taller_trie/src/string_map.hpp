@@ -31,7 +31,7 @@ string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
 template <typename T>
 string_map<T>::~string_map(){
     // COMPLETAR
-    Kaboom();
+    // Kaboom();
 }
 
 template <typename T>
@@ -58,7 +58,6 @@ void string_map<T>::insert(const pair<string, T>  &pal) {
     }
     if (actual->definicion!= nullptr){
         delete actual->definicion;
-
     }
     (actual->definicion)=new T(def);
   /*  T* def;
@@ -115,57 +114,47 @@ template <typename T>
 void string_map<T>::erase(const string& clave) {
     // COMPLETAR
     Nodo* actual=raiz;
-    /*
-     * while(i<clave.size()){
-        bool bifurca= false;
-        int j=0;
-        while(not bifurca and j<actual->siguientes.size()){
-            if (actual->siguientes[j]!= nullptr){
-                bifurca= true;
-            }else{
-                desde=j;
-                j++;
-            }
-        }
-    }
-     */
     Nodo* ultimaClave=actual;
-    string pal;
-    for (auto& c : clave){
-        actual=actual->siguientes[c];
-        if (actual->definicion!= nullptr){
-            ultimaClave=actual;
-        }
-
-    }
-    int j=0;
+    int i=0;
+    string c=clave;
     bool sigue= false;
-    if (actual!= nullptr) {
-        for (auto &p: actual->siguientes) {
-            if (p != nullptr) {
-                sigue = true;
+    for (int j=0; j<c.size();j++){
+        if (actual->siguientes[c[j]]->definicion!= nullptr){
+            ultimaClave=actual;
+            i=j;
+        }
+        actual=actual->siguientes[c[j]];
+        if (actual!= nullptr) {
+            for (auto &p: actual->siguientes) {
+                if (p != nullptr) {
+                    sigue = true;
+                    i=j;
+                }
             }
         }
     }
+
     if (sigue){
         delete actual->definicion;
-
+        actual->definicion= nullptr;
     }else{
         Nodo* desde;
-        if (ultimaClave->definicion==actual->definicion){
-            desde=raiz;
+        if (ultimaClave->definicion== nullptr){
+            i=0;
+            desde=raiz->siguientes[clave[i]];
         } else {
-            desde = ultimaClave;
+            desde = ultimaClave->siguientes[clave[i]];
         }
-        for (auto& c : clave) {
-                Nodo *prox = desde->siguientes[c];
+        for (i;i<c.size()-1;i++) {
+                Nodo* prox = desde->siguientes[c[i+1]];
                 delete desde;
                 desde= prox;
-                if (desde->definicion==actual->definicion){
-                    delete desde->definicion;
-                }
         }
-
+        delete actual->definicion;
+        actual->definicion= nullptr;
+        delete actual;
+        raiz->siguientes[c[0]]= nullptr;
+        _claves.erase(clave);
 
     }
 }
@@ -183,5 +172,5 @@ bool string_map<T>::empty() const{
 }
 template <typename T>
 void string_map<T>::Kaboom() {
-    borrarNodos(raiz);
+    //borrarNodos(raiz);
 }

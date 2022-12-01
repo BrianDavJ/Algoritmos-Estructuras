@@ -62,10 +62,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug
+CMAKE_BINARY_DIR = "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug"
 
 # Utility rule file for correrValgrind.
 
@@ -90,6 +90,6 @@ CMakeFiles/correrValgrind.dir/clean:
 .PHONY : CMakeFiles/correrValgrind.dir/clean
 
 CMakeFiles/correrValgrind.dir/depend:
-	cd /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug /mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug/CMakeFiles/correrValgrind.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie" "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie" "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug" "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug" "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug/CMakeFiles/correrValgrind.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/correrValgrind.dir/depend
 

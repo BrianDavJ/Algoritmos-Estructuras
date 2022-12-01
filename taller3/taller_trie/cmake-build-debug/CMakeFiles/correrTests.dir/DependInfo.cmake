@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/tests/string_map_tests.cpp" "/mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug/CMakeFiles/correrTests.dir/tests/string_map_tests.cpp.o"
+  "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/tests/string_map_tests.cpp" "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug/CMakeFiles/correrTests.dir/tests/string_map_tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,8 +14,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/mnt/c/Users/Usuario/Downloads/taller_trie/taller_trie/cmake-build-debug/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/mnt/c/Users/Usuario/Desktop/estudiar online/Algoritmos y estructuras de Datos 2/Labo/algo2-2022c2-individual/taller3/taller_trie/cmake-build-debug/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

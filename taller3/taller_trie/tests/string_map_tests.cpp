@@ -82,7 +82,7 @@ TEST(string_map_test, count) {
 	EXPECT_FALSE(con_prefijos.count("cas") == 1);
 	EXPECT_FALSE(con_prefijos.count("caso") == 1);
 }
-/*
+
 TEST(string_map_test, copiar) {
     string_map<int> sin_prefijos;
     string_map<int> con_prefijos;
@@ -167,7 +167,7 @@ TEST(string_map_test, TrieDeTries) {
 	EXPECT_EQ(dicc_dicc.at("con_prefijos").at("casona"), 3);
 
 }
-*/
+
 TEST(string_map_test, eraseUnicaClave) {
     string_map<int> singleton;
     singleton.insert(make_pair("hola", 1));
