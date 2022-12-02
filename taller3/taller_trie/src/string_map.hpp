@@ -12,10 +12,12 @@ string_map<T>::string_map(const string_map<T>& aCopiar) : string_map() { *this =
 template <typename T>
 string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
     // COMPLETAR
-    *this->raiz=nullptr;  // Sería mejor usar erase para "vaciar" *this? Estoy usando el operador = de Nodo* acá, no?
+    for(auto c : this->_claves){
+        this->erase(c);
+    }  // Sería mejor usar erase para "vaciar" *this? Estoy usando el operador = de Nodo* acá, no?
     for (auto  c : d._claves){
         const pair<string,T> par(c, d.at(c));
-        *this->insert(par);
+        this->insert(par);
     }
     return *this;
 }
@@ -23,7 +25,7 @@ string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
 template <typename T>
 string_map<T>::~string_map(){
     // COMPLETAR
-    // Kaboom();
+    Kaboom();
 }
 
 template <typename T>
@@ -118,7 +120,7 @@ void string_map<T>::erase(const string& clave) {
         actual=actual->siguientes[c[j]];
         if (actual!= nullptr) {
             for (auto &p: actual->siguientes) {
-                if (p != nullptr) {
+                if (p != nullptr and p!=actual->siguientes[c[j+1]]) {
                     sigue = true;
                     i=j;
                 }
@@ -129,6 +131,7 @@ void string_map<T>::erase(const string& clave) {
     if (sigue){
         delete actual->definicion;
         actual->definicion= nullptr;
+        _claves.erase(clave);
     }else{
         Nodo* desde;
         if (ultimaClave->definicion== nullptr){
@@ -164,5 +167,5 @@ bool string_map<T>::empty() const{
 }
 template <typename T>
 void string_map<T>::Kaboom() {
-    //borrarNodos(raiz);
+    borrarNodos(raiz);
 }
