@@ -1,0 +1,46 @@
+In file included from ./string_map.h:108,
+                 from ../../../../../taller3/string_map_tests.cpp:2:
+./string_map.hpp: In instantiation of ‘int string_map<T>::count(const string&) const [with T = int; std::string = std::__cxx11::basic_string<char>]’:
+../../../../../taller3/string_map_tests.cpp:8:5:   required from here
+./string_map.hpp:71:13: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   71 |     while (i<c.size()  && actual!= nullptr) {
+      |            ~^~~~~~~~~
+./string_map.hpp:75:9: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   75 |     if(i==clave.size() and actual!=nullptr and actual->definicion!= nullptr){
+      |        ~^~~~~~~~~~~~~~
+./string_map.hpp: In instantiation of ‘void string_map<T>::insert(const std::pair<std::__cxx11::basic_string<char>, T>&) [with T = int]’:
+../../../../../taller3/string_map_tests.cpp:13:42:   required from here
+./string_map.hpp:44:12: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   44 |     while(i<pal.first.size()){
+./string_map.hpp: In instantiation of ‘T& string_map<T>::at(const string&) [with T = int; std::string = std::__cxx11::basic_string<char>]’:
+../../../../../taller3/string_map_tests.cpp:15:5:   required from here
+./string_map.hpp:100:12: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  100 |     while(i<clave.size()){
+      |           ~^~~~~~~~~~~~~
+./string_map.hpp: In instantiation of ‘void string_map<T>::insert(const std::pair<std::__cxx11::basic_string<char>, T>&) [with T = string_map<int>]’:
+../../../../../taller3/string_map_tests.cpp:153:48:   required from here
+./string_map.hpp:44:12: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   44 |     while(i<pal.first.size()){
+./string_map.hpp: In instantiation of ‘T& string_map<T>::at(const string&) [with T = string_map<int>; std::string = std::__cxx11::basic_string<char>]’:
+../../../../../taller3/string_map_tests.cpp:158:2:   required from here
+./string_map.hpp:100:12: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  100 |     while(i<clave.size()){
+      |           ~^~~~~~~~~~~~~
+./string_map.hpp: In instantiation of ‘void string_map<T>::erase(const string&) [with T = int; std::string = std::__cxx11::basic_string<char>]’:
+../../../../../taller3/string_map_tests.cpp:178:27:   required from here
+./string_map.hpp:115:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  115 |     for (int j=0; j<c.size();j++){
+      |                   ~^~~~~~~~~
+./string_map.hpp:143:14: warning: statement has no effect [-Wunused-value]
+  143 |         for (i;i<c.size()-1;i++) {
+      |              ^
+./string_map.hpp:143:17: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  143 |         for (i;i<c.size()-1;i++) {
+      |                ~^~~~~~~~~~~
+./string_map.hpp: In instantiation of ‘const T& string_map<T>::at(const string&) const [with T = int; std::string = std::__cxx11::basic_string<char>]’:
+./string_map.hpp:19:30:   required from ‘string_map<T>& string_map<T>::operator=(const string_map<T>&) [with T = int]’
+./string_map.hpp:10:80:   required from ‘string_map<T>::string_map(const string_map<T>&) [with T = int]’
+../../../../../taller3/string_map_tests.cpp:98:39:   required from here
+./string_map.hpp:87:12: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   87 |     while(i<clave.size()){
+      |           ~^~~~~~~~~~~~~
