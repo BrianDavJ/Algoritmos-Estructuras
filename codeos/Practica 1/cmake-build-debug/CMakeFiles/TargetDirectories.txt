@@ -1,0 +1,3 @@
+C:/Users/Brian/Desktop/bri/Facultad/Algoritmos y estructuras de datos/Algo 3/Ejercicios/Practica 1/cmake-build-debug/CMakeFiles/Practica_1.dir
+C:/Users/Brian/Desktop/bri/Facultad/Algoritmos y estructuras de datos/Algo 3/Ejercicios/Practica 1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Brian/Desktop/bri/Facultad/Algoritmos y estructuras de datos/Algo 3/Ejercicios/Practica 1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
